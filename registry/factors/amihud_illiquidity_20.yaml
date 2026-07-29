@@ -1,0 +1,13 @@
+factor_id: amihud_illiquidity_20
+name: 20-Day Amihud Illiquidity
+status: replicated
+asset_classes: [cn_equity, us_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, close, volume]
+lookback_periods: 20
+availability_lag: 0d
+universe_rule: liquid_instruments_only
+tags: [liquidity, microstructure]
+source_urls:
+  - https://doi.org/10.1111/0022-1082.00065
+card: docs/factor-cards/amihud_illiquidity_20.md
