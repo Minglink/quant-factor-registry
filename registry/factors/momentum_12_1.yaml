@@ -1,0 +1,13 @@
+factor_id: momentum_12_1
+name: 12-1 Momentum
+status: replicated
+asset_classes: [cn_equity, us_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, close]
+lookback_periods: 252
+availability_lag: 0d
+universe_rule: liquid_instruments_only
+tags: [momentum, price]
+source_urls:
+  - https://doi.org/10.1111/j.1540-6261.1993.tb04702.x
+card: docs/factor-cards/momentum_12_1.md
