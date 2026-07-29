@@ -1,0 +1,18 @@
+factor_id: high_low_range_20
+name: 20-Day High-Low Range
+name_zh: 20 日高低价振幅
+category: volatility
+status: replicated
+asset_classes: [cn_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, high, low, close]
+lookback_periods: 20
+availability_lag: 0d
+availability_policy: high, low and close are known after the trading session; execute no earlier than the next session
+universe_rule: liquid_instruments_only
+tags: [volatility, range]
+version: 0.1.0
+source_license: Formula reimplemented from the cited academic source; this implementation is MIT licensed.
+source_urls: [https://doi.org/10.1093/rfs/3.3.477]
+implementation: factor_registry.factors.equity:high_low_range_20
+card: docs/factor-cards/high_low_range_20.md

@@ -30,6 +30,7 @@ class FactorSpec:
 
     factor_id: str
     name: str
+    category: str
     asset_classes: tuple[AssetClass, ...]
     frequency: Frequency
     required_fields: tuple[str, ...]
@@ -37,7 +38,11 @@ class FactorSpec:
     lookback_periods: int = 0
     universe_rule: str = "liquid_instruments_only"
     status: str = "experimental"
+    version: str = "0.1.0"
     source_urls: tuple[str, ...] = ()
+    source_license: str = ""
+    availability_policy: str = "end_of_bar"
+    data_conventions: Mapping[str, str] = field(default_factory=dict)
     execution_notes: str = ""
     tags: tuple[str, ...] = ()
 

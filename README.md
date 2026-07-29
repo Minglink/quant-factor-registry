@@ -1,5 +1,9 @@
 # Alpha Commons
 
+## Current Registry
+
+The A-share daily MVP currently contains 13 auditable price-and-volume factors across momentum, reversal, volatility and liquidity. Browse the [factor catalog](docs/factors.md), inspect the machine-readable records in `registry/factors/`, or run `validate_registry()` to check that every entry has a source, availability policy, card and importable implementation.
+
 面向多资产研究的**可发现、可运行、可验证、可复现**因子注册中心。首个可运行版本聚焦 A 股日频横截面因子；美股、期货、加密货币与高频市场通过同一份因子协议扩展。
 
 > 这不是又一个公式清单。每个因子都必须有来源、数据契约、实现、可得性说明、测试和标准评估结果。

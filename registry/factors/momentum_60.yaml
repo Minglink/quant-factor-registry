@@ -1,19 +1,18 @@
-factor_id: reversal_5
-name: 5-Day Reversal
-name_zh: 5 日反转
-category: reversal
+factor_id: momentum_60
+name: 60-Day Momentum
+name_zh: 60 日动量
+category: momentum
 status: replicated
-asset_classes: [cn_equity, us_equity]
+asset_classes: [cn_equity]
 frequency: 1d
 required_fields: [timestamp, instrument, close]
-lookback_periods: 5
+lookback_periods: 60
 availability_lag: 0d
 availability_policy: close is known after the trading session; execute no earlier than the next session
 universe_rule: liquid_instruments_only
-tags: [reversal, price]
+tags: [momentum, price]
 version: 0.1.0
 source_license: Formula reimplemented from the cited academic source; this implementation is MIT licensed.
-source_urls:
-  - https://doi.org/10.1111/j.1540-6261.1990.tb05063.x
-implementation: factor_registry.factors.equity:reversal_5
-card: docs/factor-cards/reversal_5.md
+source_urls: [https://doi.org/10.1111/j.1540-6261.1993.tb04702.x]
+implementation: factor_registry.factors.equity:momentum_60
+card: docs/factor-cards/momentum_60.md

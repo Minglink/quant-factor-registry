@@ -1,0 +1,18 @@
+factor_id: return_skewness_20
+name: 20-Day Return Skewness
+name_zh: 20 日收益率偏度
+category: volatility
+status: experimental
+asset_classes: [cn_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, close]
+lookback_periods: 20
+availability_lag: 0d
+availability_policy: close is known after the trading session; execute no earlier than the next session
+universe_rule: liquid_instruments_only
+tags: [volatility, distribution]
+version: 0.1.0
+source_license: Standard market-data-derived measure; this implementation is MIT licensed.
+source_urls: [https://doi.org/10.1016/j.jfineco.2005.05.003]
+implementation: factor_registry.factors.equity:return_skewness_20
+card: docs/factor-cards/return_skewness_20.md

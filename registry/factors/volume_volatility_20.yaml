@@ -1,0 +1,18 @@
+factor_id: volume_volatility_20
+name: 20-Day Volume Volatility
+name_zh: 20 日成交量波动率
+category: liquidity
+status: experimental
+asset_classes: [cn_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, volume]
+lookback_periods: 20
+availability_lag: 0d
+availability_policy: volume is known after the trading session; execute no earlier than the next session
+universe_rule: liquid_instruments_only
+tags: [liquidity, volume]
+version: 0.1.0
+source_license: Standard market-data-derived measure; this implementation is MIT licensed.
+source_urls: [https://doi.org/10.1111/j.1540-6261.1990.tb05063.x]
+implementation: factor_registry.factors.equity:volume_volatility_20
+card: docs/factor-cards/volume_volatility_20.md

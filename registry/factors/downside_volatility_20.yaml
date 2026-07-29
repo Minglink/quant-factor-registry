@@ -1,19 +1,18 @@
-factor_id: volatility_20
-name: 20-Day Realized Volatility
-name_zh: 20 日实现波动率
+factor_id: downside_volatility_20
+name: 20-Day Downside Volatility
+name_zh: 20 日下行波动率
 category: volatility
 status: replicated
-asset_classes: [cn_equity, us_equity]
+asset_classes: [cn_equity]
 frequency: 1d
 required_fields: [timestamp, instrument, close]
 lookback_periods: 20
 availability_lag: 0d
 availability_policy: close is known after the trading session; execute no earlier than the next session
 universe_rule: liquid_instruments_only
-tags: [volatility, risk]
+tags: [volatility, downside_risk]
 version: 0.1.0
 source_license: Formula reimplemented from the cited academic source; this implementation is MIT licensed.
-source_urls:
-  - https://doi.org/10.2307/2329167
-implementation: factor_registry.factors.equity:volatility_20
-card: docs/factor-cards/volatility_20.md
+source_urls: [https://doi.org/10.2307/2329167]
+implementation: factor_registry.factors.equity:downside_volatility_20
+card: docs/factor-cards/downside_volatility_20.md
