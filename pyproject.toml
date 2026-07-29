@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alpha-commons"
+version = "0.1.0"
+description = "A reproducible multi-asset factor registry"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "MinLinking"}]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+qlib = ["pyqlib>=0.9.6"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.setuptools.packages.find]
+where = ["src"]
