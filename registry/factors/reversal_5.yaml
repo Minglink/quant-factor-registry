@@ -1,0 +1,11 @@
+factor_id: reversal_5
+name: 5-Day Reversal
+status: replicated
+asset_classes: [cn_equity, us_equity]
+frequency: 1d
+required_fields: [timestamp, instrument, close]
+lookback_periods: 5
+availability_lag: 0d
+universe_rule: liquid_instruments_only
+tags: [reversal, price]
+card: docs/factor-cards/reversal_5.md
